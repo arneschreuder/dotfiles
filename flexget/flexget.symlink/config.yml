@@ -1,0 +1,24 @@
+secrets: secrets.yml
+
+tasks:
+  download:
+    priority: 1
+    rss: "{{secrets.showrss.rss}}"
+    series:
+      settings:
+        good:
+          quality: <=720p
+          propers: no
+      good:
+        - Extant
+        - Game of Thrones
+        - Mr. Robot
+        - Shameless (US)
+        - Suits
+        - The Big Bang Theory
+        - The Originals
+        - The Vampire Diaries
+     content_filter:
+       require: '*.mp4'
+    download:
+      path: "{{secrets.directories.torrents}}"

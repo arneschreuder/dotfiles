@@ -1,0 +1,5 @@
+# Import aliases
+if [ -f ~/.aliases ]
+then
+    . ~/.aliases
+fi

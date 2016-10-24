@@ -1,0 +1,216 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIMRC
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Credit goes to:
+"   * Steve Lost:
+"       - Awesome and very complete vimrc.
+"       - Email: <steve@stevelosh.com>
+"       - Source: http://bitbucket.org/sjl/dotfiles/src/tip/vim/
+"   * Simon van Dyk:
+"       - Found a lot of customization and similarities that I liked.
+"       - Email: simon.vandyk@gmail.com
+"       - Source: https://github.com/sighmin/dotfiles/blob/master/.vimrc
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" STARTUP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+execute pathogen#infect()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VISUAL
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntax highlighting.
+syntax on
+
+" Font
+set guifont=Menlo\ 10
+
+" Colors.
+" set t_Co=256
+" set term=xterm-256color
+
+" Solarized specific options.
+let g:solarized_termcolors=256
+
+" Molokai specific options.
+let g:molokai_original=1
+let g:rehash256=1
+
+" Theme options.
+"set background=light
+set background=dark
+
+" Available themes
+colorscheme molokai
+"colorscheme solarized
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" BASIC SETTINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+filetype on
+filetype plugin indent on
+
+set encoding=utf-8
+set modelines=0
+set autoindent
+set showmode
+set showcmd
+set hidden
+set visualbell
+set ttyfast
+set backspace=indent,eol,start
+set number
+set relativenumber
+set ruler
+set laststatus=2
+set history=1000
+set undofile
+set undoreload=10000
+set list
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set lazyredraw
+set matchtime=3
+set showbreak=↪
+set splitbelow
+set splitright
+set autowrite
+set autoread
+set shiftround
+set title
+set linebreak
+set colorcolumn=+1
+set paste
+set mouse=a
+set guioptions+=a
+set scrolloff=5
+set laststatus=2
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SEARCH
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set ignorecase  " Case insensitive when starting with a Lower case letter.
+set smartcase   " Case senstive when starting with Capital letter.
+set incsearch
+set hlsearch
+noh
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" WILDMENU
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set wildmenu
+set wildmode=list:longest
+
+set wildignore+=.hg,.git,.svn                    " Version control
+set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
+set wildignore+=*.spl                            " compiled spelling word lists
+set wildignore+=*.sw?                            " Vim swap files
+set wildignore+=*.DS_Store                       " OSX bullshit
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" WHITESPACE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup trailing
+    au!
+    au InsertEnter * :set listchars-=trail:⌴
+    au InsertLeave * :set listchars+=trail:⌴
+augroup END
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" LINE RETURN
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Make sure Vim returns to the same line when you reopen a file.
+" Thanks, Amit
+augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CURSORLINE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Only show cursorline in the current window and in normal mode.
+
+augroup cline
+    au!
+    au WinLeave,InsertEnter * set nocursorline
+    au WinEnter,InsertLeave * set cursorline
+augroup END
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TABS, SPACES AND WRAPPING
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set wrap
+set textwidth=80
+set formatoptions=qrn1
+set colorcolumn=+1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" BEHAVIOURAL
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au FocusLost * :silent! wall
+au VimResized * :wincmd =
+
+set noesckeys
+" Time out on key codes but not mappings.
+" Basically this makes terminal Vim work sanely.
+set notimeout
+set ttimeout
+set ttimeoutlen=10
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" BACKUPS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set backup                          " enable backups
+set undofile                        " enable undofiles
+set backupdir=~/.tmp/bak
+set directory=~/.tmp/swp
+set undodir=~/.tmp/undo
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" KEY REMAPS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Bad Habits
+noremap <Left> <NOP>
+noremap <Down> <NOP>
+noremap <Up> <NOP>
+noremap <Right> <NOP>
+inoremap <Left> <NOP>
+inoremap <Down> <NOP>
+inoremap <Up> <NOP>
+inoremap <Right> <NOP>
+
+" Leader
+let mapleader = ","
+let maplocalleader = "\\"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PLUGINS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NerdTree specific binds.
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+
+" NerdTree Tabs specific binds.
+map <C-N> :NERDTreeTabsToggle<CR>
+
+" Vim Airline
+let g:airline_theme='molokai'
+
+" delimitMate
+let delimitMate_autoclose = 1
+let delimitMate_matchpairs = "(:),[:],{:},<:>"
+let delimitMate_quotes = "\" ' ` *"
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1

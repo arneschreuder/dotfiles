@@ -1,0 +1,19 @@
+# Keep .gitkeep files.
+!.gitkeep
+
+# Wildcards
+*~
+~*
+
+# Temp files
+*.swp
+*.tmo
+*.bkp
+
+# Mac DS_Store
+*.DS_Store
+
+# Do not keep VIM artifacts.
+tmp/tmp.symlink/bak/*
+tmp/tmp.symlink/undo/*
+tmp/tmp.symlink/swp/*

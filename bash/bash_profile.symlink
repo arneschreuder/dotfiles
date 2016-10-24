@@ -1,0 +1,5 @@
+# Link bashrc so that Mac and Linux uses the same bash config.
+if [ -f ~/.bashrc ]; then
+   . ~/.bashrc
+fi
+

@@ -1,0 +1,5 @@
+# Ruby Env
+eval "$(rbenv init -)"
+
+# Docker
+eval "$(docker-machine env default)"

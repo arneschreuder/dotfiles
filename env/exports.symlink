@@ -1,0 +1,16 @@
+# Export Locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Exports to PATH
+export PATH=""
+export PATH=$PATH:/bin
+export PATH=$PATH:/sbin
+export PATH=$PATH:/usr/bin
+export PATH=$PATH:/usr/sbin
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/opt/X11/bin
+export PATH=$PATH:/usr/local/opt/php56/bin
+export PATH=$PATH:~/.composer/vendor/bin
+export PATH=$PATH:"$(brew --prefix homebrew/php/php56)/bin"

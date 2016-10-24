@@ -1,0 +1,63 @@
+#i Brew taps and settings.
+tap "caskroom/cask"
+tap "homebrew/php"
+tap "homebrew/services"
+cask_args appdir: '/Applications'
+
+# Brew casks.
+cask "bibdesk"
+cask "bittorrent"
+cask "dropbox"
+cask "eclipse-ide"
+cask "filezilla"
+cask "firefox"
+cask "flash-player"
+cask "google-chrome"
+cask "iterm2"
+cask "java"
+cask "keka"
+cask "mysqlworkbench"
+cask "netbeans"
+cask "skype"
+cask "staruml"
+cask "vagrant"
+cask "vlc"
+cask "virtualbox"
+
+# Terminal tools.
+brew "gource"
+brew "nmap"
+brew "openssl"
+brew "tree"
+brew "wget"
+
+# Development environment.
+brew "bash"
+brew "tmux"
+brew "zsh"
+
+# Libraries and Dependencies
+brew "apr"
+brew "apr-util"
+brew "rbenv"
+
+# Development tools.
+brew "boot2docker"
+brew "docker"
+brew "docker-compose"
+brew "gcc"
+brew "gdb"
+brew "git"
+brew "cmake"
+brew "macvim"
+brew "mysql"
+brew "node" # Need to run installer first.
+brew "php56"
+brew "python"
+brew "python3"
+brew "scala"
+
+# Modules
+brew "php56-oauth"
+brew "php56-pdo-dblib"
+brew "php56-xdebug"
