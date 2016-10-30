@@ -92,8 +92,8 @@ rm -rf ~/.tmp/bak
 mkdir -p ~/.tmp/bak
 
 echo " - Recreating ~/.tmp/swp"
-rm -rf ~/.tmp/swap
-mkdir -p ~/.tmp/swap
+rm -rf ~/.tmp/swp
+mkdir -p ~/.tmp/swp
 
 echo " - Recreating ~/.tmp/undo"
 rm -rf ~/.tmp/undo
