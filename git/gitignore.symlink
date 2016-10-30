@@ -7,7 +7,7 @@
 
 # Temp files
 *.swp
-*.tmo
+*.tmp
 *.bkp
 
 # Mac DS_Store

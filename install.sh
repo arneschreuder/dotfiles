@@ -91,7 +91,7 @@ echo " - Recreating ~/.tmp/bak"
 rm -rf ~/.tmp/bak
 mkdir -p ~/.tmp/bak
 
-echo " - Recreating ~/.tmp/swap"
+echo " - Recreating ~/.tmp/swp"
 rm -rf ~/.tmp/swap
 mkdir -p ~/.tmp/swap
 
