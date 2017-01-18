@@ -12,3 +12,15 @@ if [ -f ~/.git-completion.bash ]
 then
     . ~/.git-completion.bash
 fi
+
+# Enable npm completion
+if [ -f ~/.npm-completion ]
+then
+    . ~/.npm-completion
+fi
+
+# Enable ng completion
+if [ -f ~/.ng-completion ]
+then
+    . ~/.ng-completion
+fi

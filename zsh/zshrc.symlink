@@ -42,3 +42,15 @@ source ~/.imports
 
 # Evals
 source ~/.evals
+
+# Enable npm completion
+if [ -f ~/.npm-completion ]
+then
+    . ~/.npm-completion
+fi
+
+# Enable ng completion
+if [ -f ~/.ng-completion ]
+then
+    . ~/.ng-completion
+fi
