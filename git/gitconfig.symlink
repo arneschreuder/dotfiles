@@ -10,7 +10,7 @@
     ui = true
 [core]
     excludesfile = ~/.gitignore
-    editor = "/usr/local/Cellar/macvim/8.0-112/MacVim.app/Contents/MacOS/Vim -f"
+    editor = "vim"
 [help]
     autocorrect = 1
 [push]

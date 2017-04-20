@@ -86,7 +86,6 @@ set paste
 set mouse=a
 set guioptions+=a
 set scrolloff=5
-set laststatus=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SEARCH
@@ -182,18 +181,25 @@ set undodir=~/.tmp/undo
 " KEY REMAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bad Habits
-noremap <Left> <NOP>
-noremap <Down> <NOP>
-noremap <Up> <NOP>
-noremap <Right> <NOP>
-inoremap <Left> <NOP>
-inoremap <Down> <NOP>
-inoremap <Up> <NOP>
-inoremap <Right> <NOP>
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
 
 " Leader
 let mapleader = ","
 let maplocalleader = "\\"
+
+" Tabs
+nnoremap tl :tabnext<cr>
+nnoremap th :tabprev<cr>
+nnoremap tn :tabnew<cr>
+nnoremap tc :tabclose<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
