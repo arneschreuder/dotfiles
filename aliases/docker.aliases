@@ -1,0 +1,14 @@
+# Docker aliases
+
+# LS commands
+alias dils="docker images"
+alias dpls="docker ps -a"
+alias dvls="docker volume ls"
+
+# RM commands
+alias diru='docker rmi $(docker images | grep "none>" | awk "{print $3}")'
+alias dvrd='docker volume rm $(docker volume ls -qf dangling=true)'
+
+# Kill, stop and RM
+alias dpkr='docker kill $(docker ps -aq) && docker rm $(docker ps -aq)'
+

@@ -1,3 +1,11 @@
+## 0.7
+
+- Add snippets for jasmine
+  - `afterAll`, `afterEach`
+  - `beforeAll`, `beforeEach`
+  - `describe`, `fdescribe`, `xdescribe`
+  - `it`, `xit`, `fit`
+
 ## 0.6.3
 
 - Updates `ngSwitchWhen` to `ngSwitchCase`
