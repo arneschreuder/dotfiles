@@ -13,6 +13,10 @@
 # Mac DS_Store
 *.DS_Store
 
+# Atom modules
+atom/atom.symlink/packages
+atom/atom.symlink/storage
+
 # Do not keep VIM artifacts.
 tmp/tmp.symlink/bak/*
 tmp/tmp.symlink/undo/*
