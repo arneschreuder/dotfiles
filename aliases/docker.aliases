@@ -4,6 +4,7 @@
 alias dils="docker images"
 alias dpls="docker ps -a"
 alias dvls="docker volume ls"
+alias dnls="docker network ls"
 
 # RM commands
 alias diru='docker rmi $(docker images | grep "none>" | awk "{print $3}")'
