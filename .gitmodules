@@ -1,30 +1,30 @@
 [submodule "res/iTerm2-Color-Schemes"]
 	path = res/iTerm2-Color-Schemes
-	url = git@github.com:mbadolato/iTerm2-Color-Schemes.git
+	url = https://github.com/mbadolato/iTerm2-Color-Schemes.git
 [submodule "res/powerline-fonts"]
 	path = res/powerline-fonts
-	url = git@github.com:powerline/fonts.git
+	url = https://github.com/powerline/fonts.git
 [submodule "vim/vim.symlink/bundle/molokai"]
 	path = vim/vim.symlink/bundle/molokai
-	url = git@github.com:tomasr/molokai.git
+	url = https://github.com/tomasr/molokai.git
 [submodule "vim/vim.symlink/bundle/nerdtree"]
 	path = vim/vim.symlink/bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/vim.symlink/bundle/vim-airline"]
 	path = vim/vim.symlink/bundle/vim-airline
-	url = git@github.com:bling/vim-airline
+	url = https://github.com/bling/vim-airline
 [submodule "vim/vim.symlink/bundle/vim-better-whitespace"]
 	path = vim/vim.symlink/bundle/vim-better-whitespace
-	url = git@github.com:ntpeters/vim-better-whitespace.git
+	url = https://github.com/ntpeters/vim-better-whitespace.git
 [submodule "vim/vim.symlink/bundle/vim-colors-solarized"]
 	path = vim/vim.symlink/bundle/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "zsh/oh-my-zsh.symlink"]
 	path = zsh/oh-my-zsh.symlink
-	url = git@github.com:robbyrussell/oh-my-zsh.git
+	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "vim/vim.symlink/bundle/vim-airline-themes"]
 	path = vim/vim.symlink/bundle/vim-airline-themes
-	url = git@github.com:vim-airline/vim-airline-themes.git
+	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "vim/vim.symlink/bundle/vim-nerdree-tabs"]
 	path = vim/vim.symlink/bundle/vim-nerdree-tabs
-	url = git@github.com:jistr/vim-nerdtree-tabs.git
+	url = https://github.com/jistr/vim-nerdtree-tabs.git

@@ -2,10 +2,6 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Exports for java and scala
-export JAVA_HOME=/Library/Java/Home
-export SCALA_HOME=/usr/local/share/scala
-
 # Exports to PATH
 export PATH=""
 export PATH=/bin:$PATH
@@ -14,7 +10,3 @@ export PATH=/usr/bin:$PATH
 export PATH=/usr/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=/opt/X11/bin:$PATH
-export PATH="$(brew --prefix homebrew/php/php71)/bin":$PATH
-export PATH=/Library/TeX/texbin:$PATH
-export PATH=$SCALA_HOME/bin:$PATH

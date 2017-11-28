@@ -15,12 +15,15 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STARTUP
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set nocompatible
 execute pathogen#infect()
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VISUAL
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Syntax highlighting.
 syntax on
 
@@ -45,6 +48,7 @@ set background=dark
 " Available themes
 colorscheme molokai
 "colorscheme solarized
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC SETTINGS
@@ -87,18 +91,22 @@ set mouse=a
 set guioptions+=a
 set scrolloff=5
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SEARCH
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set ignorecase  " Case insensitive when starting with a Lower case letter.
 set smartcase   " Case senstive when starting with Capital letter.
 set incsearch
 set hlsearch
 noh
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " WILDMENU
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set wildmenu
 set wildmode=list:longest
 
@@ -110,18 +118,22 @@ set wildignore+=*.spl                            " compiled spelling word lists
 set wildignore+=*.sw?                            " Vim swap files
 set wildignore+=*.DS_Store                       " OSX bullshit
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " WHITESPACE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 augroup trailing
     au!
     au InsertEnter * :set listchars-=trail:⌴
     au InsertLeave * :set listchars+=trail:⌴
 augroup END
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " LINE RETURN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Make sure Vim returns to the same line when you reopen a file.
 " Thanks, Amit
 augroup line_return
@@ -132,9 +144,11 @@ augroup line_return
         \ endif
 augroup END
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CURSORLINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Only show cursorline in the current window and in normal mode.
 
 augroup cline
@@ -143,9 +157,11 @@ augroup cline
     au WinEnter,InsertLeave * set cursorline
 augroup END
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TABS, SPACES AND WRAPPING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -155,9 +171,11 @@ set textwidth=80
 set formatoptions=qrn1
 set colorcolumn=+1
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BEHAVIOURAL
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 au FocusLost * :silent! wall
 au VimResized * :wincmd =
 
@@ -168,18 +186,22 @@ set notimeout
 set ttimeout
 set ttimeoutlen=10
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BACKUPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set backup                          " enable backups
 set undofile                        " enable undofiles
 set backupdir=~/.tmp/bak
 set directory=~/.tmp/swp
 set undodir=~/.tmp/undo
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY REMAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Bad Habits
 noremap <up> <nop>
 noremap <down> <nop>
@@ -201,9 +223,11 @@ nnoremap th :tabprev<cr>
 nnoremap tn :tabnew<cr>
 nnoremap tc :tabclose<cr>
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " NerdTree specific binds.
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
