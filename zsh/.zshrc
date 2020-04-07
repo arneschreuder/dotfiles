@@ -5,6 +5,7 @@ ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 ZSH_THEME="agnoster-custom"
 
 # Exports
+export DEFAULT_USER=`whoami`
 export EDITOR="nvim"
 export LANG="en_US.UTF-8"
 export LC_ALL=""
@@ -59,11 +60,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Disable user@hostname prompt
-#prompt_context() {
-  #if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    #prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-  #fi
-#}
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
 
 # oh-my-zsh
 source $ZSH/oh-my-zsh.sh

@@ -6,6 +6,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'altercation/vim-colors-solarized' " Solarized color scolor scheme
   Plug 'ctrlpvim/ctrlp.vim' " Fuzzy file buffer
   Plug 'edkolev/tmuxline.vim' " Adds tmux airline
+  Plug 'easymotion/vim-easymotion' " Enables easy motion
   Plug 'godlygeek/tabular' " Smart tab aligning
   Plug 'jiangmiao/auto-pairs' " Automatically add pairs of brackets, parents, quotes
   Plug 'jmcantrell/vim-virtualenv' " Support for virtualenv
@@ -93,7 +94,7 @@ set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=1
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -306,3 +307,6 @@ set softtabstop=0 " No tab characters
 set t_Co=256 " Sets 256 colors
 set tabstop=2 " Spaces for tabs
 set termguicolors " True colors
+set timeoutlen=500 " Timeout stops after 1s
+set ttimeoutlen=5 " Timeout between keys
+
