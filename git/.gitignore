@@ -1,14 +1,6 @@
-# Keep .gitkeep files.
-!.gitkeep
-
 # Wildcards
 *~
 ~*
-
-# Temp files
-*.swp
-*.tmp
-*.bkp
 
 # Mac DS_Store
 .DS_Store

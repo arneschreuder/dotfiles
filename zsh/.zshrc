@@ -5,6 +5,7 @@ ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 ZSH_THEME="agnoster-custom"
 
 # Exports
+export CLICOLOR=1
 export DEFAULT_USER=`whoami`
 export EDITOR="nvim"
 export LANG="en_US.UTF-8"
@@ -17,7 +18,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Aliases
 eval $(thefuck --alias)
-alias tmux="TERM=xterm-256color tmux"
+alias tmux="TERM=screen-256color-bce tmux -2"
 alias vim="nvim"
 
 # Keybindings
@@ -33,7 +34,7 @@ plugins=(
   docker
   gcloud
   git
-	history
+  history
   history-substring-search
   kubectl
   ng
@@ -47,7 +48,7 @@ plugins=(
   terraform
   thefuck
   tig
-  tmux
+  # tmux
   virtualenv
   vi-mode
   yarn

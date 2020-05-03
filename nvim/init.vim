@@ -18,8 +18,8 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'preservim/nerdcommenter' " Commenting
   Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " Formatting (on save)
   Plug 'ryanoasis/vim-devicons'
-  Plug 'sonph/onehalf' " One half color scheme
   Plug 'scalameta/metals' " Scala language server
+  Plug 'sonph/onehalf', {'rtp': 'vim/'} " One half colorscheme
   Plug 'terryma/vim-multiple-cursors' " Support multiple cursors
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " Colored icons
   Plug 'tomasr/molokai' " Molokai color scheme
@@ -33,12 +33,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 call plug#end()
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AIRLINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:airline_powerline_fonts=1 " Enabled patched fonts
-let g:airline_theme='molokai' " Sets the theme
+let g:airline_theme='onehalfdark' " Sets the theme
 let g:airline#extensions#tabline#enabled=1 " Automatic display all buffers when there is only one tab open
 
 
@@ -282,7 +281,7 @@ let g:DevIconsEnableFoldersOpenClose = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CONFIGURATIONS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme molokai
+colorscheme onehalfdark
 filetype plugin on
 syntax on " Enables syntax highlighting
 
