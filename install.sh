@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -ex
+set -e
 
 if [[ "$(uname)" == "Darwin" ]]; then
   if [[ -z "$(xcode-select -p)" ]]; then
@@ -32,9 +32,9 @@ ln -sf $(pwd)/tmux/.tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/zsh/.hushlogin ~/.hushlogin
 ln -sf $(pwd)/zsh/.oh-my-zsh/custom ~/.oh-my-zsh
 ln -sf $(pwd)/zsh/.zshrc ~/.zshrc
-
+ln -sf $(pwd)/zsh/.p10k.zsh ~/.p10k.zsh
 curl \
-	-fLo \
+	-sfLo \
 	~/.local/share/nvim/site/autoload/plug.vim \
 	--create-dirs \
     	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
