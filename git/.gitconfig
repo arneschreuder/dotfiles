@@ -1,5 +1,6 @@
 [user]
-    name = Arné Schreuder
+	name = Arné Schreuder
+	email = arneschreuder@icloud.com
 [color]
     diff = auto
     status = auto
