@@ -29,6 +29,7 @@ ln -sf $(pwd)/git/.gitconfig ~/.gitconfig
 ln -sf $(pwd)/base16/shell ~/.config/base16-shell
 ln -sf $(pwd)/nvim/init.vim ~/.vimrc
 ln -sf $(pwd)/nvim/init.vim ~/.config/nvim/init.vim
+ln -sf $(pwd)/nvim/coc/coc-settings.json ~/.config/nvim
 ln -sf $(pwd)/tmux/.tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/zsh/.hushlogin ~/.hushlogin
 ln -sf $(pwd)/zsh/.oh-my-zsh/custom ~/.oh-my-zsh
