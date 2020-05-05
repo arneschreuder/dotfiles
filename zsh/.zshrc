@@ -117,3 +117,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 # Removes padding to the right
 ZLE_RPROMPT_INDENT=0
+
+# To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
+[[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
