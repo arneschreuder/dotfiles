@@ -20,8 +20,9 @@ if [[ $SHELL != *"zsh"* ]]; then
   chsh -s /bin/zsh
 fi
 
-mkdir -p ~/.vim
 mkdir -p ~/.config/nvim
+mkdir -p ~/.tmux/plugins/tpm
+mkdir -p ~/.vim
 
 ln -sf $(pwd)/git/.gitignore ~/.gitignore
 ln -sf $(pwd)/git/.gitconfig ~/.gitconfig
@@ -33,6 +34,7 @@ ln -sf $(pwd)/zsh/.hushlogin ~/.hushlogin
 ln -sf $(pwd)/zsh/.oh-my-zsh/custom ~/.oh-my-zsh
 ln -sf $(pwd)/zsh/.zshrc ~/.zshrc
 ln -sf $(pwd)/zsh/.p10k.zsh ~/.p10k.zsh
+
 curl \
 	-sfLo \
 	~/.local/share/nvim/site/autoload/plug.vim \
@@ -40,3 +42,5 @@ curl \
     	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 nvim +PlugInstall +qall
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

@@ -2,6 +2,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 	" Gruvbox theme and goodies
 	Plug 'morhetz/gruvbox'
 
+	" Sensible default settings that every vim user should have
+	Plug 'tpope/vim-sensible'
+
 	" Airline
 	Plug 'vim-airline/vim-airline'
 call plug#end()
@@ -28,6 +31,12 @@ let g:gruvbox_invert_selection=0
 " Sets the background mode
 set background=dark
 
+" Enables the mouse with scrolling
+set mouse=a
+
+" Disables compatibility mode
+set nocompatible
+
 " Enables line numbers
 set number
 
@@ -35,7 +44,7 @@ set number
 set relativenumber
 
 " Enables spell checking
-" set spell
+set spell
 
 " Enables 24-bit RGB color
 set termguicolors
@@ -43,3 +52,8 @@ set termguicolors
 " Sets the color scheme
 colorscheme gruvbox
 
+" Enables filetype checking
+filetype on
+
+" Enables syntax highlighting
+syntax on

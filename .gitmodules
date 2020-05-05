@@ -10,3 +10,6 @@
 [submodule "base16/iterm2"]
 	path = base16/iterm2
 	url = git@github.com:martinlindhe/base16-iterm2.git
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
