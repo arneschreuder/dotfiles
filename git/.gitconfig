@@ -1,0 +1,16 @@
+[user]
+	name = Arné Schreuder
+	email = arneschreuder@icloud.com
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+[core]
+    excludesfile = ~/.gitignore
+    editor = "nvim"
+[help]
+    autocorrect = 1
+[push]
+    default = simple

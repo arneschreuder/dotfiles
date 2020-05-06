@@ -12,7 +12,4 @@
 	url = git@github.com:martinlindhe/base16-iterm2.git
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
-[submodule "tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git
