@@ -16,6 +16,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 # FZF
 export FZF_BASE=$(brew --prefix)/opt/fzf
+export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -87,7 +88,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colored-man-pages fzf git history vi-mode)
+plugins=(
+	colored-man-pages
+	docker
+	fzf
+	git
+	history
+	ripgrep
+	vi-mode
+	zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 

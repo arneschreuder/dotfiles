@@ -1,4 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
+	" Adds gutter showing git diffs
+	Plug 'airblade/vim-gitgutter'
+
 	" Fuzzy searching
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
@@ -9,8 +12,15 @@ call plug#begin('~/.local/share/nvim/plugged')
 	" Conquer of completion (intellisense)
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+	" Adds multiple cursor support
+	Plug 'terryma/vim-multiple-cursors'
+
+	" Adds surround mnemonic
+	Plug 'tpope/vim-surround'
+
 	" Git integration
-	" Plug 'tpope/vim-fugitive' " Not sure yet
+	Plug 'tpope/vim-fugitive'
+
 	" Sensible default settings that every vim user should have
 	Plug 'tpope/vim-sensible'
 
@@ -20,7 +30,7 @@ call plug#end()
 
 " Set airline theme
 let g:airline_theme='gruvbox'
-"
+
 " Enable powerline fonts
 let g:airline_powerline_fonts=1
 
@@ -37,8 +47,14 @@ let g:gruvbox_contrast_light='hard'
 " Do not invert selection
 let g:gruvbox_invert_selection=0
 
+" Gruvbox sign column background color
+let g:gruvbox_sign_column='bg0'
+
 " Sets the background mode
 set background=dark
+
+" Highlights current line
+set cursorline
 
 " Enables the mouse with scrolling
 set mouse=a
