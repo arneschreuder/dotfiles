@@ -12,6 +12,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 	" Conquer of completion (intellisense)
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+	" Adds commentary mnemonic
+	Plug 'tpope/vim-commentary'
+
 	" Adds multiple cursor support
 	Plug 'terryma/vim-multiple-cursors'
 
