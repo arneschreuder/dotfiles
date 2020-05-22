@@ -7,7 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'junegunn/fzf.vim'
 
 	" Gruvbox theme and goodies
-	Plug 'morhetz/gruvbox'
+    Plug 'morhetz/gruvbox'
 
 	" Conquer of completion (intellisense)
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -16,7 +16,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'tpope/vim-commentary'
 
 	" Adds multiple cursor support
-	Plug 'terryma/vim-multiple-cursors'
+	" Plug 'terryma/vim-multiple-cursors'
 
 	" Adds surround mnemonic
 	Plug 'tpope/vim-surround'
@@ -53,11 +53,17 @@ let g:gruvbox_invert_selection=0
 " Gruvbox sign column background color
 let g:gruvbox_sign_column='bg0'
 
+" Enables auto indentation
+set autoindent
+
 " Sets the background mode
 set background=dark
 
 " Highlights current line
 set cursorline
+
+" Use spaces as tabs
+set expandtab
 
 " Enables the mouse with scrolling
 set mouse=a
@@ -72,8 +78,17 @@ set number
 " Enables relative numbering
 set relativenumber
 
+" Sets the tab (shift) width to 4
+set shiftwidth=4
+
+" Enables smart indentation
+set smartindent
+
 " Enables spell checking
 set spell
+
+" Set the tab (tab) width to 4
+set tabstop=4
 
 " Enables 24-bit RGB color
 set termguicolors
@@ -90,6 +105,8 @@ syntax on
 " Maps fzf :Files to ctrl-p
 nnoremap <C-p> :Files<cr>
 
+" Keeps search under cursor on current word
+nnoremap * *``
 
 
 
@@ -253,3 +270,21 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " COC explorer
 """
 nmap <space>e :CocCommand explorer<CR>
+
+
+
+
+"""
+" COC Multiple cursors
+"""
+" Make the selection a diffent color than for seach highlight
+hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
+
+" Selection key mapping
+" nmap <expr> <silent> <C-d> <SID>select_current_word()
+" function! s:select_current_word()
+"   if !get(g:, 'coc_cursors_activated', 0)
+"     return "\<Plug>(coc-cursors-word)*"
+"   endif
+"   return "*n\<Plug>(coc-cursors-word)"
+" endfunc

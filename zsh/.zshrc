@@ -94,6 +94,7 @@ plugins=(
 	fzf
 	git
 	history
+	pip
 	ripgrep
 	vi-mode
 	zsh-autosuggestions
