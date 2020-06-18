@@ -1,4 +1,7 @@
 {
+  "suggest.autoTrigger": "always",
+  "suggest.enablePreselect": false,
+  "suggest.noselect": false,
   "git.addGBlameToVirtualText": true,
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",

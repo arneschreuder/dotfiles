@@ -38,7 +38,7 @@ let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts=1
 
 " Show all buffers when there is only one tab open
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled=1
 
 " Sets the color mode to 256 colors for base16 color schemes
 let base16colorspace=256
@@ -71,7 +71,6 @@ set mouse=a
 " Disables compatibility mode
 set nocompatible
 
-"
 " Enables line numbers
 set number
 
@@ -84,14 +83,17 @@ set shiftwidth=4
 " Enables smart indentation
 set smartindent
 
-" Enables spell checking
-set spell
-
 " Set the tab (tab) width to 4
 set tabstop=4
 
 " Enables 24-bit RGB color
 set termguicolors
+
+" Undo persistence
+set undofile                " Save undos after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
 
 " Sets the color scheme
 colorscheme gruvbox
@@ -128,7 +130,7 @@ set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=1
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -272,8 +274,6 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 nmap <space>e :CocCommand explorer<CR>
 
 
-
-
 """
 " COC Multiple cursors
 """
@@ -281,10 +281,21 @@ nmap <space>e :CocCommand explorer<CR>
 hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
 
 " Selection key mapping
-" nmap <expr> <silent> <C-d> <SID>select_current_word()
-" function! s:select_current_word()
-"   if !get(g:, 'coc_cursors_activated', 0)
-"     return "\<Plug>(coc-cursors-word)*"
-"   endif
-"   return "*n\<Plug>(coc-cursors-word)"
-" endfunc
+nmap <expr> <silent> <C-d> <SID>select_current_word()
+function! s:select_current_word()
+  if !get(g:, 'coc_cursors_activated', 0)
+    return "\<Plug>(coc-cursors-word)*"
+  endif
+  return "*n\<Plug>(coc-cursors-word)*"
+endfunc
+
+" Refactor
+nmap <silent> <leader>r <Plug>(coc-refactor)*
+
+
+"""
+" Jump to last edit in file
+"""
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
