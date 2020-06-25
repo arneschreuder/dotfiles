@@ -12,6 +12,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 	" Conquer of completion (intellisense)
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+    " Extra syntax support
+    Plug 'sheerun/vim-polyglot'
+
 	" Adds commentary mnemonic
 	Plug 'tpope/vim-commentary'
 
