@@ -2,6 +2,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 	" Adds gutter showing git diffs
 	Plug 'airblade/vim-gitgutter'
 
+    " Use Ag and Rg commands with params
+    Plug 'jesseleite/vim-agriculture'
+
+    " Automatically add matching pairs
+    Plug 'jiangmiao/auto-pairs'
+
 	" Fuzzy searching
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
@@ -56,6 +62,9 @@ let g:gruvbox_invert_selection=0
 " Gruvbox sign column background color
 let g:gruvbox_sign_column='bg0'
 
+" FZF preview disable
+let g:fzf_preview_window=''
+
 " Enables auto indentation
 set autoindent
 
@@ -107,8 +116,11 @@ filetype on
 " Enables syntax highlighting
 syntax on
 
-" Maps fzf :Files to ctrl-p
+" FZF Mappings
 nnoremap <C-p> :Files<cr>
+nnoremap <leader>p :Commands<cr>
+nnoremap <leader>P :CocCommand<cr>
+nmap <leader>/ <Plug>RgRawSearch
 
 " Keeps search under cursor on current word
 nnoremap * *``
@@ -135,7 +147,7 @@ set nowritebackup
 " Give more space for displaying messages.
 set cmdheight=1
 
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" Having longer updatetime (default is 4000 ms i= 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
 
@@ -302,3 +314,9 @@ nmap <silent> <leader>r <Plug>(coc-refactor)*
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+
+
+" Makes the ~ characters at end of file same as background
+hi NonText guifg=bg
+

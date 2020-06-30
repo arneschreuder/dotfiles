@@ -17,6 +17,7 @@ export ZSH=$HOME/.oh-my-zsh
 # FZF
 export FZF_BASE=$(brew --prefix)/opt/fzf
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
