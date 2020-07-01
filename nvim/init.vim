@@ -12,6 +12,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 
+    " Symbols with LSP
+    Plug 'liuchengxu/vista.vim'
+
 	" Gruvbox theme and goodies
     Plug 'morhetz/gruvbox'
 
@@ -83,6 +86,9 @@ set mouse=a
 " Disables compatibility mode
 set nocompatible
 
+" Disables mode output text since Airline does this anyway
+set noshowmode
+
 " Enables line numbers
 set number
 
@@ -91,6 +97,9 @@ set relativenumber
 
 " Sets the tab (shift) width to 4
 set shiftwidth=4
+
+" Enables smart case search
+set smartcase
 
 " Enables smart indentation
 set smartindent
@@ -116,10 +125,15 @@ filetype on
 " Enables syntax highlighting
 syntax on
 
+" Buffers mappings
+nnoremap gn :bn<cr>
+nnoremap gp :bp<>cr>
+nnoremap gx :bd<cr>
+
 " FZF Mappings
 nnoremap <C-p> :Files<cr>
 nnoremap <leader>p :Commands<cr>
-nnoremap <leader>P :CocCommand<cr>
+nnoremap <leader>P :Buffers<cr>
 nmap <leader>/ <Plug>RgRawSearch
 
 " Keeps search under cursor on current word

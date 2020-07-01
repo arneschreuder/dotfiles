@@ -1,6 +1,10 @@
 {
     "explorer.icon.enableNerdfont": true,
     "explorer.previewAction.onHover": false,
+    "explorer.keyMappings": {
+        "<cr>": ["expandable?", "expand", "open"],
+        "v": "open:vsplit"
+    },
     "git.addGBlameToVirtualText": true,
     "git.addedSign.hlGroup": "GitGutterAdd",
     "git.changedSign.hlGroup": "GitGutterChange",

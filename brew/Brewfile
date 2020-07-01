@@ -5,6 +5,8 @@ tap "homebrew/cask-fonts"
 cask_args appdir: '/Applications'
 
 # Brew casks.
+cask "alacritty"
+cask "alfred"
 cask "atom"
 cask "avast-security"
 cask "bibdesk"
@@ -67,6 +69,7 @@ brew "httpie"
 brew "htop"
 brew "ifuse"
 brew "jq"
+brew "neofetch"
 brew "nmap"
 brew "openssl"
 brew "ripgrep"

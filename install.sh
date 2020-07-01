@@ -21,8 +21,10 @@ if [[ $SHELL != *"zsh"* ]]; then
 fi
 
 mkdir -p ~/.config/nvim
+mkdir -p ~/.config/alacritty
 mkdir -p ~/.vim
 
+ln -sf $(pwd)/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -sf $(pwd)/fzf/.fzf.zsh ~/.fzf.zsh
 ln -sf $(pwd)/git/.gitignore ~/.gitignore
 ln -sf $(pwd)/git/.gitconfig ~/.gitconfig
