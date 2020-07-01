@@ -2,9 +2,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 	" Adds gutter showing git diffs
 	Plug 'airblade/vim-gitgutter'
 
-    " Use Ag and Rg commands with params
-    Plug 'jesseleite/vim-agriculture'
-
     " Automatically add matching pairs
     Plug 'jiangmiao/auto-pairs'
 
@@ -26,9 +23,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 	" Adds commentary mnemonic
 	Plug 'tpope/vim-commentary'
-
-	" Adds multiple cursor support
-	" Plug 'terryma/vim-multiple-cursors'
 
 	" Adds surround mnemonic
 	Plug 'tpope/vim-surround'
@@ -132,9 +126,10 @@ nnoremap gx :bd<cr>
 
 " FZF Mappings
 nnoremap <C-p> :Files<cr>
-nnoremap <leader>p :Commands<cr>
-nnoremap <leader>P :Buffers<cr>
-nmap <leader>/ <Plug>RgRawSearch
+nnoremap <C-g> :GFiles<cr>
+nnoremap <leader>p :Buffers<cr>
+nnoremap <leader>P :Commands<cr>
+nnoremap <C-f> :Rg!<cr>
 
 " Keeps search under cursor on current word
 nnoremap * *``
@@ -310,7 +305,7 @@ nmap <space>e :CocCommand explorer<CR>
 hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
 
 " Selection key mapping
-nmap <expr> <silent> <C-d> <SID>select_current_word()
+nmap <expr> <silent> <C-s> <SID>select_current_word()
 function! s:select_current_word()
   if !get(g:, 'coc_cursors_activated', 0)
     return "\<Plug>(coc-cursors-word)*"
