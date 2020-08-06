@@ -119,26 +119,12 @@ filetype on
 " Enables syntax highlighting
 syntax on
 
-" Buffers mappings
-nnoremap gn :bn<cr>
-nnoremap gp :bp<>cr>
-nnoremap gx :bd<cr>
-
 " FZF Mappings
 nnoremap <C-p> :Files<cr>
-nnoremap <C-g> :GFiles<cr>
-nnoremap <leader>p :Buffers<cr>
-nnoremap <leader>P :Commands<cr>
-nnoremap <C-f> :Rg!<cr>
+nnoremap <C-f> :CocSearch
 
 " Keeps search under cursor on current word
 nnoremap * *``
-
-
-
-
-
-
 
 
 
