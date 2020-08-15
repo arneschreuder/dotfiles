@@ -147,7 +147,3 @@ ZLE_RPROMPT_INDENT=0
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-
-# Add SSH key
-ssh-add -K ~/.ssh/id_rsa
