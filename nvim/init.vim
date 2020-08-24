@@ -74,6 +74,9 @@ set cursorline
 " Use spaces as tabs
 set expandtab
 
+" More optimal rendering
+set lazyredraw
+
 " Enables the mouse with scrolling
 set mouse=a
 
