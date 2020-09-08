@@ -1,0 +1,5 @@
+pane	masters	0	:terminal	0	:-	0	:/Users/arneschreuder/Development/personal/masters/thesis	1	zsh	:
+pane	masters	1	:nvim	1	:*	0	:/Users/arneschreuder/Development/personal/masters/thesis	1	nvim	:nvim
+window	masters	0	0	:-	ae7e,180x50,0,0,1
+window	masters	1	1	:*	ae7d,180x50,0,0,0
+state	masters	

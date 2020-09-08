@@ -1,4 +1,5 @@
 {
+    "coc.source.vimtex.enable": true,
     "explorer.icon.enableNerdfont": true,
     "explorer.previewAction.onHover": false,
     "explorer.keyMappings": {

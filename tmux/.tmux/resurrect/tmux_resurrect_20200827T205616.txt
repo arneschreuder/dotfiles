@@ -1,0 +1,5 @@
+pane	dotfiles	0	:zsh	1	:*	0	:/Users/arneschreuder/.dotfiles	1	zsh	:
+pane	masters	0	:zsh	1	:*	0	:/Users/arneschreuder	1	zsh	:
+window	dotfiles	0	1	:*	ae7e,180x50,0,0,1
+window	masters	0	1	:*	ae7d,180x50,0,0,0
+state	dotfiles	

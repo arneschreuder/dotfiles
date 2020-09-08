@@ -28,6 +28,7 @@ ln -sf $(pwd)/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -sf $(pwd)/fzf/.fzf.zsh ~/.fzf.zsh
 ln -sf $(pwd)/git/.gitignore ~/.gitignore
 ln -sf $(pwd)/git/.gitconfig ~/.gitconfig
+ln -sf $(pwd)/latex/.latexmkrc ~/.latexmkrc
 ln -sf $(pwd)/base16/shell ~/.config/base16-shell
 ln -sf $(pwd)/nvim/init.vim ~/.config/nvim/init.vim
 ln -sf $(pwd)/nvim/coc/coc-settings.json ~/.config/nvim

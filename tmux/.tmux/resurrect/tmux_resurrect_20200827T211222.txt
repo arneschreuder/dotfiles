@@ -1,0 +1,17 @@
+pane	2	0	:zsh	1	:*	0	:/Users/arneschreuder	1	zsh	:
+pane	dotfiles	0	:zsh	1	:*	0	:/Users/arneschreuder/.dotfiles	1	zsh	:
+pane	masters	0	:terminal	1	:*	0	:/Users/arneschreuder/Development/personal/masters	1	zsh	:
+pane	masters	1	:source	0	:	0	:/Users/arneschreuder/Development/personal/masters/source	1	nvim	:nvim
+pane	masters	2	:jupyter	0	:-	0	:/Users/arneschreuder/Development/personal/masters/source	1	Python	:/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/Resources/Python.app/Contents/MacOS/Python /Users/arneschreuder/Development/personal/masters/source/.venv/bin/jupyter-lab
+pane	masters	3	:thesis	0	:	0	:/Users/arneschreuder/Development/personal/masters/thesis	1	nvim	:nvim
+pane	masters	4	:tensorboard	0	:	0	:/Users/arneschreuder/Development/personal/masters/source	1	zsh	:
+pane	masters	5	:other	0	:	0	:/Users/arneschreuder	1	zsh	:
+window	2	0	1	:*	ae7f,180x50,0,0,2
+window	dotfiles	0	1	:*	ae7e,180x50,0,0,1
+window	masters	0	1	:*	ae80,180x50,0,0,3
+window	masters	1	0	:	ae81,180x50,0,0,4
+window	masters	2	0	:-	ae84,180x50,0,0,7
+window	masters	3	0	:	ae82,180x50,0,0,5
+window	masters	4	0	:	ae83,180x50,0,0,6
+window	masters	5	0	:	ae85,180x50,0,0,8
+state	masters	dotfiles
