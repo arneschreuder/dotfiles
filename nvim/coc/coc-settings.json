@@ -1,5 +1,13 @@
 {
     "coc.source.vimtex.enable": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "html",
+        "javascript",
+        "markdown",
+        "python",
+        "typescript"
+    ],
     "explorer.icon.enableNerdfont": true,
     "explorer.previewAction.onHover": false,
     "explorer.keyMappings": {

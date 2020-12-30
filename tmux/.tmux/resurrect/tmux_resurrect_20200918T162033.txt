@@ -1,0 +1,15 @@
+pane	2	0	:zsh	1	:*	0	:/Users/arneschreuder	1	zsh	:
+pane	dotfiles	0	:nvim	1	:*	0	:/Users/arneschreuder/.dotfiles	1	nvim	:nvim
+pane	innovation-africa	0	:terminal	1	:*	0	:/Users/arneschreuder/Development/innovation-africa	1	zsh	:
+pane	innovation-africa	1	:nvim	0	:	0	:/Users/arneschreuder/Development/innovation-africa	1	nvim	:nvim
+pane	innovation-africa	2	:serve-organisations	0	:	0	:/Users/arneschreuder/Development/innovation-africa	1	zsh	:
+pane	innovation-africa	3	:serve-postgres	0	:-	0	:/Users/arneschreuder/Development/innovation-africa	1	zsh	:
+pane	innovation-africa	4	:watch-prisma-generate	0	:	0	:/Users/arneschreuder/Development/innovation-africa	1	zsh	:
+window	2	0	1	:*	d53e,320x79,0,0,1
+window	dotfiles	0	1	:*	d53f,320x79,0,0,2
+window	innovation-africa	0	1	:*	d540,320x79,0,0,3
+window	innovation-africa	1	0	:	d541,320x79,0,0,4
+window	innovation-africa	2	0	:	d542,320x79,0,0,5
+window	innovation-africa	3	0	:-	d543,320x79,0,0,6
+window	innovation-africa	4	0	:	d544,320x79,0,0,7
+state	innovation-africa	dotfiles

@@ -1,28 +1,34 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'airblade/vim-gitgutter'                       " Adds gutter showing git diffs
+Plug 'chriskempson/base16-vim'                      " Base 16 colorschemes
+Plug 'editorconfig/editorconfig-vim'                " Editorconfig integration
 Plug 'godlygeek/tabular'                            " Alignment plugin
 Plug 'jiangmiao/auto-pairs'                         " Automatically add matching pairs
+Plug 'jparise/vim-graphql'                          " Adds graphql support
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy searching
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'                      " Easly align symbols
 Plug 'lervag/vimtex'                                " Latex support
+Plug 'liuchengxu/vista.vim'                         " Adds an outline to code
+Plug 'mattn/emmet-vim'                              " Adds emmet functionality
 Plug 'morhetz/gruvbox'                              " Gruvbox theme and goodies
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Conquer of completion (intellisense)
+Plug 'pantharshit00/vim-prisma'
 Plug 'sheerun/vim-polyglot'                         " Extra syntax support
 Plug 'tpope/vim-commentary'                         " Adds commentary mnemonic
-Plug 'junegunn/vim-easy-align'                      " Easly align symbols
-Plug 'tpope/vim-surround'                           " Adds surround mnemonic
 Plug 'tpope/vim-fugitive'                           " Git integration
-Plug 'vim-scripts/gnuplot.vim'                      " Gnuplot syntax highlighting
 Plug 'tpope/vim-sensible'                           " Sensible default settings that every vim user should have
+Plug 'tpope/vim-surround'                           " Adds surround mnemonic
 Plug 'vim-airline/vim-airline'                      " Airline
+Plug 'vim-scripts/gnuplot.vim'                      " Gnuplot syntax highlighting
 call plug#end()
 
+let base16colorspace=256                   " Sets the color mode to 256 colors for base16 color schemes
 let g:airline_theme='gruvbox'              " Set airline theme
 let g:airline_powerline_fonts=1            " Enable powerline fonts
 let g:airline#extensions#tabline#enabled=1 " Show all buffers when there is only one tab open
-let base16colorspace=256                   " Sets the color mode to 256 colors for base16 color schemes
-let g:gruvbox_contrast_dark='hard'         " Sets contrast mode for gruvbox
-let g:gruvbox_contrast_light='hard'
+let g:gruvbox_contrast_dark='hard'         " Sets contrast mode for gruvbox for dark setting
+let g:gruvbox_contrast_light='hard'        " Sets contrast mode for gruvbox for dark setting
 let g:gruvbox_invert_selection=0           " Do not invert selection
 let g:gruvbox_sign_column='bg0'            " Gruvbox sign column background color
 let g:fzf_preview_window='right:50%'       " FZF preview disable
@@ -30,28 +36,30 @@ let g:tex_flavor='latex'                   " Sets the tex file extension to inte
 let g:vimtex_view_general_viewer='skim'
 let g:vimtex_view_method='skim'
 
-set autoindent              " Enables auto indentation
-set background=dark         " Sets the background mode
-" set colorcolumn=+1,+2     " Set guidelines
-" set cursorline            " Highlights current line
-set expandtab               " Use spaces as tabs
-set incsearch               " Enables incremental search
-set lazyredraw              " More optimal rendering
-set mouse=a                 " Enables the mouse with scrolling
-set noshowmode              " Disables mode output text since Airline does this anyway
-set noswapfile              " Disables swap files
-set number                  " Enables line numbers
-set relativenumber          " Enables relative numbering
-set shiftwidth=4            " Sets the tab (shift) width to 4
-set smartcase               " Enables smart case search
-set smartindent             " Enables smart indentation
-set tabstop=4               " Set the tab (tab) width to 4
-set termguicolors           " Enables 24-bit RGB color
-set textwidth=80            " Line wrapping
-set undofile                " Save undos after file closes
-set undodir=$HOME/.vim/undo " where to save undo histories
-set undolevels=1000         " How many undos
-set undoreload=10000        " number of lines to save for undo
+set autoindent                " Enables auto indentation
+set background=dark           " Sets the background mode
+" set colorcolumn=+1,+2,+41,+42 " Set guidelines
+" set cursorline                " Highlights current line
+set expandtab                 " Use spaces as tabs
+set incsearch                 " Enables incremental search
+set lazyredraw                " More optimal rendering
+set mouse=a                   " Enables the mouse with scrolling
+set noshowmode                " Disables mode output text since Airline does this anyway
+set noswapfile                " Disables swap files
+set number                    " Enables line numbers
+set relativenumber            " Enables relative numbering
+set shiftwidth=4              " Sets the tab (shift) width to 4
+set smartcase                 " Enables smart case search
+set smartindent               " Enables smart indentation
+set splitbelow                " Opens horisontal split at the bottom
+set splitright                " Opens vertical split to the right
+set tabstop=4                 " Set the tab (tab) width to 4
+set termguicolors             " Enables 24-bit RGB color
+" set textwidth=80              " Line wrapping
+set undofile                  " Save undos after file closes
+set undodir=$HOME/.vim/undo   " where to save undo histories
+set undolevels=1000           " How many undos
+set undoreload=10000          " number of lines to save for undo
 
 " Sets the color scheme
 colorscheme gruvbox
@@ -64,6 +72,7 @@ syntax on
 
 " FZF Mappings
 nnoremap <C-p> :GFiles<cr>
+nnoremap <leader>p :Files<cr>
 nnoremap <C-f> :CocSearch
 
 " Keeps search under cursor on current word
@@ -267,6 +276,3 @@ endif
 
 " Makes the ~ characters at end of file same as background
 hi NonText guifg=bg
-
-
-

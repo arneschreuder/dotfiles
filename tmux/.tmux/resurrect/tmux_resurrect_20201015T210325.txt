@@ -1,0 +1,11 @@
+pane	innovation-africa	0	:nvim	0	:	0	:/Users/arneschreuder/Development/innovation-africa	1	zsh	:
+pane	innovation-africa	1	:zsh	0	:	0	:/Users/arneschreuder	1	zsh	:
+pane	innovation-africa	2	:zsh	0	:	0	:/Users/arneschreuder	1	zsh	:
+pane	innovation-africa	3	:zsh	0	:-	0	:/Users/arneschreuder	1	zsh	:
+pane	innovation-africa	4	:zsh	1	:*	0	:/Users/arneschreuder	1	zsh	:
+window	innovation-africa	0	0	:	ae7d,180x50,0,0,0
+window	innovation-africa	1	0	:	ae7e,180x50,0,0,1
+window	innovation-africa	2	0	:	ae7f,180x50,0,0,2
+window	innovation-africa	3	0	:-	ae80,180x50,0,0,3
+window	innovation-africa	4	1	:*	ae81,180x50,0,0,4
+state	innovation-africa	

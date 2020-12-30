@@ -14,11 +14,6 @@ export PATH="/usr/local/sbin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# FZF
-export FZF_BASE=$(brew --prefix)/opt/fzf
-export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
-
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
@@ -92,12 +87,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
 	colored-man-pages
 	docker
-	fzf
 	git
 	history
-	pip
-	ripgrep
-	vi-mode
 	zsh-autosuggestions
 )
 
@@ -129,12 +120,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -143,7 +128,4 @@ ZLE_RPROMPT_INDENT=0
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
 [[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
-
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -1,0 +1,21 @@
+pane	dopamine	0	:terminal	0	:	0	:/Users/arneschreuder/Development/schreuder.ai/dopamine	1	zsh	:
+pane	dopamine	1	:gateway-api	1	:*	0	:/Users/arneschreuder/Development/schreuder.ai/dopamine	1	zsh	:
+pane	dopamine	2	:users-api	0	:-	0	:/Users/arneschreuder/Development/schreuder.ai/dopamine	1	zsh	:
+pane	dopamine	3	:posts-api	0	:	0	:/Users/arneschreuder/Development/schreuder.ai/dopamine	1	zsh	:
+pane	dopamine	4	:users	0	:	0	:/Users/arneschreuder/Development/schreuder.ai/dopamine	1	zsh	:
+pane	dopamine	5	:posts	0	:	0	:/Users/arneschreuder/Development/schreuder.ai/dopamine	1	zsh	:
+pane	dopamine	6	:users-db	0	:	0	:/Users/arneschreuder/Development/schreuder.ai/dopamine	1	zsh	:
+pane	dopamine	7	:posts-db	0	:	0	:/Users/arneschreuder/Development/schreuder.ai/dopamine	1	zsh	:
+pane	dopamine	8	:postgres	0	:	0	:/Users/arneschreuder/Development/schreuder.ai/dopamine	1	zsh	:
+pane	dopamine	9	:mongo	0	:	0	:/Users/arneschreuder/Development/schreuder.ai/dopamine	1	zsh	:
+window	dopamine	0	0	:	cd3d,320x77,0,0,0
+window	dopamine	1	1	:*	cd3e,320x77,0,0,1
+window	dopamine	2	0	:-	cd3f,320x77,0,0,2
+window	dopamine	3	0	:	cd40,320x77,0,0,3
+window	dopamine	4	0	:	cd41,320x77,0,0,4
+window	dopamine	5	0	:	cd42,320x77,0,0,5
+window	dopamine	6	0	:	cd43,320x77,0,0,6
+window	dopamine	7	0	:	cd44,320x77,0,0,7
+window	dopamine	8	0	:	cd45,320x77,0,0,8
+window	dopamine	9	0	:	cd46,320x77,0,0,9
+state	dopamine	

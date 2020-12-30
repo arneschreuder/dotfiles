@@ -1,0 +1,5 @@
+pane	masters	0	:terminal	0	:-	0	:/Users/arneschreuder/Development/personal/masters/source	1	zsh	:
+pane	masters	1	:source	1	:*	0	:/Users/arneschreuder/Development/personal/masters/source	1	zsh	:/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8/Resources/Python.app/Contents/MacOS/Python /Users/arneschreuder/Development/personal/masters/source/.venv/bin/jupyter-lab
+window	masters	0	0	:-	d53d,320x79,0,0,0
+window	masters	1	1	:*	d53e,320x79,0,0,1
+state	masters	

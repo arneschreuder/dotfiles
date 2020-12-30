@@ -1,0 +1,3 @@
+pane	innovation-africa	0	:nvim	1	:*	0	:/Users/arneschreuder/Development/innovation-africa	1	zsh	:
+window	innovation-africa	0	1	:*	ae7d,180x50,0,0,0
+state	innovation-africa	
